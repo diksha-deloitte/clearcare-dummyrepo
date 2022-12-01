@@ -30,7 +30,7 @@ public class FileController {
     @PostMapping("/upload")
     public ResponseEntity<FileResponse> fileUpload(@RequestParam("file") MultipartFile file){
 
-        //validation checks
+        //validation
         if(file.isEmpty()){
             return new ResponseEntity<FileResponse>(new FileResponse(null,"Request must contain file"),HttpStatus.INTERNAL_SERVER_ERROR);
         }
